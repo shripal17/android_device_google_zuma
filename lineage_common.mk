@@ -48,5 +48,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/google/zuma/conf/disable_pds.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/disable_pds.sh
 
+# Pixel Parts
+$(call inherit-product-if-exists, packages/apps/PixelParts/device.mk)
+
 # Touch
 include hardware/google/pixel/touch/device.mk
